@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time.h</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+
+
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+        }
+
+        header a {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            text-decoration: none;
+            color: black;
+            margin-top: 40px;
+        }
+
+
+        section {
+            width: 100vw;
+            height: 700px;
+           
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        label {
+            font-size: 1.2em;
+        }
+
+        input[type="date"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #resultat {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        
+        <a href="index.html">HOME</a>
+        <a href="#Services ">Services </a>
+        <a href="#about">About Us</a>
+      
+    </header>
+    <section>
+        <div class="intro-text">
+            <form id="dateForm">
+                <label for="dateInput">Entrez votre date de naissance :</label>
+                <input type="date" id="dateInput" name="dateInput">
+                <button type="submit">Calculer</button>
+            </form>
+            <div id="resultat"></div>
+        </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById("dateForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var dateNaissance = new Date(document.getElementById("dateInput").value);
+            var joursSemaine = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            var jourNaissance = joursSemaine[dateNaissance.getDay()];
+
+            document.getElementById("resultat").innerText = "Le jour de naissance est : " + jourNaissance;
+        });
+    </script>
+</body>
+
+</html>

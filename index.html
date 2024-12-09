@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time.h</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+
+
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+        }
+
+        header a {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            text-decoration: none;
+            color: black;
+            margin-top: 40px;
+        }
+
+
+
+
+
+        section {
+            width: 100vw;
+            height: 700px;
+
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .get {
+
+            width: 500px;
+            height: 300px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        input {
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        
+
+        button {
+            height: 50px;
+            border-radius: 10px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <a href="index.html">HOME</a>
+        <a href="services.html">Services </a>
+        <a href="#ABOUT">ABOUT</a>
+
+    </header>
+    <section>
+        <div class="intro-text">
+            <h1><span style="color: blue;">HELLO</span>,Could you write your name and get started</h1>
+            <div class="get">
+                <input type="text" name="" id="" placeholder="Your name">
+                <button id="getstarted">Get Started</button>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        document.getElementById("getstarted").addEventListener('click',function(){
+            window.location.href = "services.html";
+        })
+
+    </script>
+</body>
+
+</html>
